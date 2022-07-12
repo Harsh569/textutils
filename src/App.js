@@ -6,12 +6,12 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
 
-} from "react-router-dom";
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -41,22 +41,22 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
     <Navbar titles="TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert} />
     <div className="container my-3">
-    <Switch>
+    {/* <Switch>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/">
           <TextForm mode={mode}  showAlert={showAlert}/>
           </Route>
-        </Switch>
-    {/* <TextForm mode={mode}  showAlert={showAlert}/> */}
+        </Switch> */}
+    <TextForm mode={mode}  showAlert={showAlert}/>
     {/* <About />  */}
     </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
